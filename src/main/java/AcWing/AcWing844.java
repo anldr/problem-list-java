@@ -4,20 +4,6 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-class Pair {
-    int key;
-    int value;
-    Pair (int key, int value) {
-        this.key = key;
-        this.value = value;
-    }
-    public int getKey() {
-        return key;
-    }
-    public int getValue() {
-        return value;
-    }
-}
 public class AcWing844 {
     private static final int MAX_N = 107;
     private static final int CONSTANT = 4;
@@ -68,5 +54,20 @@ public class AcWing844 {
             }
         }
         System.out.println(bfs());
+    }
+
+    static class Pair {
+        int key;
+        int value;
+        Pair (int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+        public int getKey() {
+            return key;
+        }
+        public int getValue() {
+            return value;
+        }
     }
 }
