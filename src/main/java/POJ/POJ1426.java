@@ -23,11 +23,11 @@ public class POJ1426 {
                 return ;
             }
 
-            System.out.println(BFS(n));
+            System.out.println(Bfs(n));
         }
     }
 
-    private static long BFS(int n) {
+    private static long Bfs(int n) {
         // init que
         head = 0;
         tail = -1;
