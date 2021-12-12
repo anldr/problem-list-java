@@ -1,4 +1,4 @@
-package projecteuler;
+package projecteuler.Vol1to50;
 
 public class Problem32 {
     public static void main(String[] args) {

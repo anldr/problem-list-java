@@ -1,4 +1,4 @@
-package projecteuler;
+package projecteuler.Vol1to50;
 
 import java.util.*;
 

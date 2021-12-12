@@ -1,4 +1,4 @@
-package projecteuler;
+package projecteuler.Vol1to50;
 
 public class Problem36 {
     private static int MAX_N = 1000007;
