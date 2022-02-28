@@ -6,14 +6,9 @@ import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.TreeMap;
 
 public class POJ1416 {
     private static int maxLen = 0;
-
-    private static int total = 0;
-
-    private static int numSum = 0;
 
     private static int ansSum = 0;
 
@@ -23,11 +18,9 @@ public class POJ1416 {
 
     private static String inputStr = "";
 
-    private static List<Integer> ansList = new LinkedList<Integer>();
+    private static List<String> ansList = new LinkedList<String>();
 
     private static List<Integer> ansIndexList = new LinkedList<Integer>();
-
-//    private static TreeMap<String, Integer> ansMap = new LinkedList<Integer>();
 
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
@@ -40,68 +33,83 @@ public class POJ1416 {
             }
 
             // init
+            ansSum = 0;
             ansList.clear();
             ansIndexList.clear();
-            maxLen = params[1].length();
             inputStr = params[1];
+            maxLen = inputStr.length();
             targetNum = Integer.parseInt(params[0]);
 
-            DFS (0, params[1]);
+            DFS (0);
 
             Collections.sort(ansList);
             if (ansList.size() == 0) {
                 System.out.println("error");
-            } else if (ansList.get(ansList.size() - 1).equals(ansList.get(ansList.size() - 2))) {
+            } else if (ansList.size() >= 2 && getSum(ansList.get(ansList.size() - 1)) == getSum(ansList.get(ansList.size() - 2))) {
                 System.out.println("rejected");
             } else {
-                System.out.println(ansList.get(ansList.size() - 1) + " " + ansStr);
+                System.out.println(ansSum + " " + ansStr);
             }
         }
     }
 
-    public static void DFS(int dep, String numStr) {
+    public static void DFS(int dep) {
         // return
-        if (numStr.length() == 1 || (dep + numStr.length()) > maxLen) {
-            if ((numSum + Integer.parseInt(numStr)) <= targetNum) {
-//                ansMap
-                ansStr = outputAns(inputStr);
+        if (dep >= (maxLen - 1)) {
+            String tempStr = outputAns(inputStr);
+            int tempSum = getSum(tempStr);
+            if (tempSum <= targetNum) {
+                if (ansSum <= tempSum) {
+                    ansSum = tempSum;
+                    ansStr = tempStr;
+                    ansList.add(ansStr);
+                }
             }
             return;
         }
 
-        for (int i = 0; i < numStr.length(); i++) {
-            // two strategies
-            DFS(dep + 1, numStr.substring(i));
+        // two strategies
+        DFS(dep + 1);
 
-            if (total >= 2) {
-                return ;
-            }
-
-            ansIndexList.add(maxLen - numStr.length() + i);
-            numSum += Integer.parseInt(numStr.substring(0, i + 1));
-            DFS(dep + 1, numStr.substring(i + 1));
-            ansIndexList.remove(ansIndexList.size() - 1);
-            numSum -= Integer.parseInt(numStr.substring(0, i + 1));
-
-            if (total >= 2) {
-                return ;
-            }
-        }
+        ansIndexList.add(dep);
+        DFS(dep + 1);
+        ansIndexList.remove(ansIndexList.size() - 1);
     }
 
     public static String outputAns(String str) {
+        if (ansIndexList.size() == 0) {
+            return str;
+        }
+
         int idx = 0;
         StringBuilder ans = new StringBuilder();
         for (int i = 0; i < ansIndexList.size(); i++) {
             if (i == (ansIndexList.size() - 1)) {
-                ans.append(str, idx, ansIndexList.get(i) + 1).append(" ");
+                ans.append(str, idx, ansIndexList.get(i) + 1);
                 idx = ansIndexList.get(i) + 1;
-                ans.append(str, idx, str.length());
+                if (idx < maxLen) {
+                    ans.append(" ").append(str, idx, str.length());
+                }
             } else {
                 ans.append(str, idx, ansIndexList.get(i) + 1).append(" ");
                 idx = ansIndexList.get(i) + 1;
             }
         }
+
         return ans.toString();
+    }
+
+    public static int getSum(String param) {
+        if (param.length() <= 0) {
+            return targetNum + 1;
+        }
+
+        int result = 0;
+        String[] nums = param.split(" ");
+        for (String num : nums) {
+            result += Integer.parseInt(num);
+        }
+
+        return result;
     }
 }

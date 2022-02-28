@@ -22,8 +22,6 @@ public class POJ1129 {
 
     private static int[] nodeColor = new int[MAX_N];
 
-//    private static boolean[] color = new boolean[MAX_N];
-
     private static String[] input = new String[MAX_N];
 
     public static void main(String[] args) throws IOException {
