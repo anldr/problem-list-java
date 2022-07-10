@@ -1,5 +1,7 @@
 package leetcode.Vol1to100;
 
+import commonutils.leetcode.ListNode;
+
 public class LeetCode2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int mod = 0;
@@ -40,15 +42,4 @@ public class LeetCode2 {
 
         return head.next;
     }
-
-    /**
-     * Definition for singly-linked list.
-     */
-     public class ListNode {
-         int val;
-         ListNode next;
-         ListNode() {}
-         ListNode(int val) { this.val = val; }
-         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     }
 }
