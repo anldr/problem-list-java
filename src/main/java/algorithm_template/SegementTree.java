@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm_template;
 
 public class SegementTree {
     public SegementTree() {

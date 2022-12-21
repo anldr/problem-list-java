@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm_template;
 
 import java.util.LinkedList;
 import java.util.Queue;
