@@ -24,8 +24,8 @@ public class AcAutomaton {
         p.isEndingChar = true;
     }
 
-    /*
-        text是主串
+    /**
+     * text是主串
      */
     public void match(String text) {
         int len = text.length();
@@ -33,14 +33,17 @@ public class AcAutomaton {
         for (int i = 0; i < len; ++i) {
             int u = text.charAt(i) - 'a';
             while (p.child[u] == null && p != root) {
-                p = p.failPtr;              // 失败指针发挥作用的地方
+                // 失败指针发挥作用的地方
+                p = p.failPtr;
             }
             p = p.child[u];
             if (p == null) {
-                p = root;                   // 如果没有匹配的，从root开始重新匹配
+                // 如果没有匹配的，从root开始重新匹配
+                p = root;
             }
             AcNode tmp = p;
-            while (tmp != root) {           // 打印出可以匹配的模式串
+            // 打印出可以匹配的模式串
+            while (tmp != root) {
                 if (tmp.isEndingChar) {
                     int pos = i-tmp.len+1;
                     System.out.println("Begin Idx:" + pos + ", lenght:" + tmp.len);
@@ -50,8 +53,8 @@ public class AcAutomaton {
         }
     }
 
-    /*
-        构建失败指针
+    /**
+     * 构建失败指针
      */
     public void buildFailurePointer() {
         Queue<AcNode> queue = new LinkedList<>();
@@ -84,8 +87,11 @@ public class AcAutomaton {
     }
 
     public static class AcNode {
-        int len;                // 当isEndingChar=true时，记录data长度
-        char data;              // 模式串的字符
+        // 当isEndingChar=true时，记录data长度
+        int len;
+        // 模式串的字符
+        char data;
+
         AcNode failPtr;
         AcNode[] child;
         boolean isEndingChar;
