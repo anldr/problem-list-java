@@ -1,5 +1,7 @@
 package acwing.Vol1401to1500;
 
+import commonutils.acwing.ListNode;
+
 public class AcWing1451_2 {
     public ListNode quickSortList(ListNode head) {
         if (head == null || head.next == null) {
@@ -39,11 +41,5 @@ public class AcWing1451_2 {
         int temp = node1.val;
         node1.val = node2.val;
         node2.val = temp;
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
     }
 }
