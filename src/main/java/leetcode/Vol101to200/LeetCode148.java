@@ -65,16 +65,7 @@ public class LeetCode148 {
                 link2 = link2.next;
             }
         }
-        while (link1 != null) {
-            curNode.next = link1;
-            curNode = curNode.next;
-            link1 = link1.next;
-        }
-        while (link2 != null) {
-            curNode.next = link2;
-            curNode = curNode.next;
-            link2 = link2.next;
-        }
+        curNode.next = link1 != null ? link1 : link2;
 
         return dummyNode.next;
     }
