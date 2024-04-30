@@ -11,14 +11,16 @@ public class LeetCode234_2 {
         ListNode frontHalf = frontHalf(head);
         ListNode backHalf = reverse(frontHalf.next);
 
-        while (backHalf != null) {
-            if (head.val != backHalf.val) {
-                return false;
-            }
-            head = head.next;
-            backHalf = backHalf.next;
-        }
+        // 破坏链表结构
+//        while (backHalf != null) {
+//            if (head.val != backHalf.val) {
+//                return false;
+//            }
+//            head = head.next;
+//            backHalf = backHalf.next;
+//        }
 
+        // 不破坏链表结构
         ListNode point1 = head;
         ListNode point2 = backHalf;
         boolean result = true;
