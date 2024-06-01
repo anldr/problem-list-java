@@ -42,6 +42,7 @@ public class LRUCache<K, V> {
             cache.put(key, newNode);
             addToHead(newNode);
         } else {
+            result.value = value;
             moveToHead(result);
         }
     }

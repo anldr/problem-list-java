@@ -1,4 +1,4 @@
-package leetcode.Vol501to600;
+package leetcode.Vol601to700;
 
 import commonutils.leetcode.TreeNode;
 

@@ -42,6 +42,7 @@ public class LeetCode146 {
             cache.put(key, newNode);
             addToHead(newNode);
         } else {
+            result.value = value;
             moveToHead(result);
         }
     }

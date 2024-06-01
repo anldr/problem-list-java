@@ -1,4 +1,4 @@
-package others;
+package z_others;
 
 public class Test {
     public static int m;  //col
