@@ -1,2 +1,46 @@
+# 普通查询
 # LeetCdoe 1757
 select product_id from Products where low_fats = 'Y' and recyclable = 'Y';
+
+# LeetCode 584
+select name from Customer where (referee_id != 2 or referee_id is null);
+
+# LeetCode 595
+select name, population, area from World where area >= 3000000 or population >= 25000000;
+
+# LeetCode 1148
+select distinct author_id as id from Views where author_id = viewer_id order by id;
+
+# LeetCode 1683
+select tweet_id from Tweets where char_length(content) > 15;
+
+# 连接
+# LeetCode 1378
+select unique_id, name from Employees as em left join EmployeeUNI as emu on em.id = emu.id;
+
+# LeetCode 1068
+select product_name, year, price from Sales as sa left join Product as pt on sa.product_id = pt.product_id;
+
+# LeetCode 1581
+select customer_id, count(customer_id) as count_no_trans from Visits as vi left join Transactions as tr
+    on vi.visit_id = tr.visit_id where transaction_id is null group by customer_id;
+
+
+# 聚合函数
+# LeetCode 620
+select id, movie, description, rating from cinema where description != 'boring' and mod(id, 2) = 1 order by rating desc;
+
+# 排序分组
+# LeetCode 2356
+select teacher_id, count(distinct subject_id) as cnt from Teacher group by teacher_id;
+
+# 高级查询和连接
+# LeetCode 1731
+
+
+# 子查询
+
+
+# 高级字符串函数/正则表达式/子句
+
+
