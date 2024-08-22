@@ -1,4 +1,4 @@
 # problem-list
 algorithm_template problem, math problem
 
-这是一个长期却不定期更新的题解repo
+一个长期but不定期更新的题解repo
