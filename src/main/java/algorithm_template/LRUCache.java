@@ -20,7 +20,7 @@ public class LRUCache<K, V> {
         cache = new HashMap<>();
     }
 
-    public V get(K key) {
+    public synchronized V get(K key) {
         DoubleLinkNode<K, V> result = cache.getOrDefault(key, null);
         if (result == null) {
             return null;

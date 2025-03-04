@@ -9,16 +9,16 @@ public class LeetCode19 {
         }
 
         int total = getTotalNode(head);
-        int targetNodeIndex = total - n;
+        int removeIndex = total - n;
 
-        if (targetNodeIndex == 0) {
+        if (removeIndex == 0) {
             return head.next;
         }
 
         int curIndex = 1;
         ListNode moveNode = head;
         while (moveNode != null) {
-            if (curIndex == targetNodeIndex) {
+            if (curIndex == removeIndex) {
                 moveNode.next = moveNode.next.next;
                 break;
             }
