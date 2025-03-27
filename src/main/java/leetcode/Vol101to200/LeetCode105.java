@@ -25,7 +25,7 @@ public class LeetCode105 {
         int inIndex = inorderIndexMap.get(preorder[l]);
         int len = inIndex - ll;
         TreeNode node = new TreeNode(preorder[l]);
-        node.left = buildTree(preorder, l + 1, l + len, inorder, ll, inIndex);
+        node.left = buildTree(preorder, l + 1, l + len, inorder, ll, inIndex - 1);
         node.right = buildTree(preorder, l + len + 1, r, inorder, inIndex + 1, rr);
 
         return node;

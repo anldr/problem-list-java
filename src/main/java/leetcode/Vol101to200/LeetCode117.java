@@ -3,6 +3,10 @@ package leetcode.Vol101to200;
 import commonutils.leetcode.Node;
 
 public class LeetCode117 {
+    /**
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
+     */
     public Node connect(Node root) {
         Node result = root;
         if (root == null) {

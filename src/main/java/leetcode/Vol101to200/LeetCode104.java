@@ -4,9 +4,8 @@ import commonutils.leetcode.TreeNode;
 
 public class LeetCode104 {
     public int maxDepth(TreeNode root) {
-        int result = 0;
         if (root == null) {
-            return result;
+            return 0;
         }
 
         return maxDepth(root, 1);
