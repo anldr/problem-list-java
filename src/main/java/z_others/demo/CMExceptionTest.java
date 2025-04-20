@@ -13,12 +13,12 @@ public class CMExceptionTest {
         list.add("xxxxx3");
         list.add("xxxxx4");
 
-//        for (int i = 0; i < list.size(); i++) {
-//            if (list.get(i).equals("xxxxx")) {
-//                list.remove(i);
-//            }
-//            System.out.println(i + ": " +  list.get(i));
-//        }
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals("xxxxx")) {
+                list.remove(i);
+            }
+            System.out.println(i + ": " +  list.get(i));
+        }
 
         for (int i = 0; i < list.size(); i++) {
             if (i == 3) {

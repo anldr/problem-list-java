@@ -1,7 +1,6 @@
 package z_others.demo;
 
-import java.util.BitSet;
-import java.util.Random;
+import java.util.*;
 
 public class BitSetTest {
     public static void main(String[] args) {
