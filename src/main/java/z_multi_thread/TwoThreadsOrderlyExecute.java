@@ -1,8 +1,10 @@
 package z_multi_thread;
 
 import java.util.BitSet;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -166,7 +168,7 @@ public class TwoThreadsOrderlyExecute {
     private static boolean printOdd = true;
 
     /**
-     * Thread.yield()机制，这个机制存疑
+     * Thread.yield()机制，这个机制不太好，但是这样实现也可以达到目的
      */
     private static class OddPrinterV4 implements Runnable {
         @Override
@@ -175,11 +177,11 @@ public class TwoThreadsOrderlyExecute {
                 while (!printOdd) {
                     Thread.yield();
                 }
-                if (printNumber <= MaxNumber) {
+                if (printNumber <= MaxNumber && (printNumber & 1) == 1) {
                     System.out.println(printNumber++);
+                    printOdd = false;
+                    Thread.yield();
                 }
-                printOdd = false;
-                Thread.yield();
             }
         }
     }
@@ -191,11 +193,11 @@ public class TwoThreadsOrderlyExecute {
                 while (printOdd) {
                     Thread.yield();
                 }
-                if (printNumber <= MaxNumber) {
+                if (printNumber <= MaxNumber && (printNumber & 1) == 0) {
                     System.out.println(printNumber++);
+                    printOdd = true;
+                    Thread.yield();
                 }
-                printOdd = true;
-                Thread.yield();
             }
         }
     }
