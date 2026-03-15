@@ -1,6 +1,6 @@
 package leetcode.Vol201to300;
 
-import commonutils.leetcode.TreeNode;
+import common_structure.leetcode.TreeNode;
 
 public class LeetCode226 {
     public TreeNode invertTree(TreeNode root) {

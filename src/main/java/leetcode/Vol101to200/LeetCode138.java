@@ -1,7 +1,6 @@
 package leetcode.Vol101to200;
 
-import commonutils.leetcode.ListNode;
-import commonutils.leetcode.Node;
+import common_structure.leetcode.binary_tree.Node;
 
 public class LeetCode138 {
     public Node copyRandomList(Node head) {

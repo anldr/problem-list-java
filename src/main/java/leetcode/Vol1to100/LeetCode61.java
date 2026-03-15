@@ -1,6 +1,6 @@
 package leetcode.Vol1to100;
 
-import commonutils.leetcode.ListNode;
+import common_structure.leetcode.ListNode;
 
 public class LeetCode61 {
     public ListNode rotateRight(ListNode head, int k) {

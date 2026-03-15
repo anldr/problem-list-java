@@ -1,6 +1,6 @@
 package leetcode.Vol601to700;
 
-import commonutils.leetcode.TreeNode;
+import common_structure.leetcode.TreeNode;
 
 import java.util.Deque;
 import java.util.LinkedList;

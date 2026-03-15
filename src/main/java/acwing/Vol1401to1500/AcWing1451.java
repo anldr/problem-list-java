@@ -1,6 +1,6 @@
 package acwing.Vol1401to1500;
 
-import commonutils.acwing.ListNode;
+import common_structure.acwing.ListNode;
 
 public class AcWing1451 {
     public ListNode quickSortList(ListNode head) {

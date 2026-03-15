@@ -1,6 +1,6 @@
 package leetcode.Vol501to600;
 
-import commonutils.leetcode.TreeNode;
+import common_structure.leetcode.TreeNode;
 
 public class LeetCode543 {
     private int result;

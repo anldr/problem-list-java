@@ -1,6 +1,6 @@
 package leetcode.Vol1to100;
 
-import commonutils.acwing.ListNode;
+import common_structure.acwing.ListNode;
 
 public class LeetCode19_2 {
     int curIndex = 0;

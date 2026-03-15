@@ -1,6 +1,6 @@
 package acwing.Vol1to100;
 
-import commonutils.acwing.TreeNode;
+import common_structure.acwing.TreeNode;
 
 import java.util.*;
 

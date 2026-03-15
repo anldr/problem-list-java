@@ -1,6 +1,6 @@
 package leetcode.Vol1to100;
 
-import commonutils.leetcode.ListNode;
+import common_structure.leetcode.ListNode;
 
 public class LeetCode83_2 {
     public ListNode deleteDuplicates(ListNode head) {

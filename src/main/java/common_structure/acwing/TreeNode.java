@@ -1,4 +1,4 @@
-package commonutils.acwing;
+package common_structure.acwing;
 
 public class TreeNode {
     public int val;

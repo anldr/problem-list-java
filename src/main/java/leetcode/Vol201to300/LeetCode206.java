@@ -1,6 +1,6 @@
 package leetcode.Vol201to300;
 
-import commonutils.leetcode.ListNode;
+import common_structure.leetcode.ListNode;
 
 public class LeetCode206 {
     public ListNode reverseList(ListNode head) {

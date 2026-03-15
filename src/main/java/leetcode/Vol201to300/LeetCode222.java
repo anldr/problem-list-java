@@ -1,6 +1,6 @@
 package leetcode.Vol201to300;
 
-import commonutils.leetcode.TreeNode;
+import common_structure.leetcode.TreeNode;
 
 public class LeetCode222 {
     public int countNodes(TreeNode root) {

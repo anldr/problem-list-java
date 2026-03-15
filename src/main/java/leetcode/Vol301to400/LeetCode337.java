@@ -1,6 +1,6 @@
 package leetcode.Vol301to400;
 
-import commonutils.leetcode.TreeNode;
+import common_structure.leetcode.TreeNode;
 
 public class LeetCode337 {
     public int rob(TreeNode root) {

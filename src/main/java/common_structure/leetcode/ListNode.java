@@ -1,4 +1,4 @@
-package commonutils.leetcode;
+package common_structure.leetcode;
 
 /**
  * Definition for singly-linked list.

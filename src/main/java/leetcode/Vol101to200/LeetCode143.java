@@ -1,6 +1,6 @@
 package leetcode.Vol101to200;
 
-import commonutils.leetcode.ListNode;
+import common_structure.leetcode.ListNode;
 
 public class LeetCode143 {
     public void reorderList(ListNode head) {

@@ -1,6 +1,6 @@
 package leetcode.Vol101to200;
 
-import commonutils.leetcode.TreeNode;
+import common_structure.leetcode.TreeNode;
 
 public class LeetCode101 {
     public boolean isSymmetric(TreeNode root) {

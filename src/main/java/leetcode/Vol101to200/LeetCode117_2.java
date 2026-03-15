@@ -1,6 +1,6 @@
 package leetcode.Vol101to200;
 
-import commonutils.leetcode.Node;
+import common_structure.leetcode.binary_tree.Node;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

@@ -1,9 +1,8 @@
 package leetcode.Vol101to200;
 
-import commonutils.leetcode.TreeNode;
+import common_structure.leetcode.TreeNode;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class LeetCode199 {
     private Map<Integer, Integer> levelRight = new HashMap<>();

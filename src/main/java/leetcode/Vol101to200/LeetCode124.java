@@ -1,6 +1,6 @@
 package leetcode.Vol101to200;
 
-import commonutils.leetcode.TreeNode;
+import common_structure.leetcode.TreeNode;
 
 public class LeetCode124 {
     private int answer = Integer.MIN_VALUE;

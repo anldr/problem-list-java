@@ -1,4 +1,4 @@
-package commonutils.base;
+package common_utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;

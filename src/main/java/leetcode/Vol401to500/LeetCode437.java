@@ -1,6 +1,6 @@
 package leetcode.Vol401to500;
 
-import commonutils.leetcode.TreeNode;
+import common_structure.leetcode.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;

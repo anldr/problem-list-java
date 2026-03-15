@@ -1,6 +1,6 @@
 package leetcode.Vol601to700;
 
-import commonutils.leetcode.TreeNode;
+import common_structure.leetcode.TreeNode;
 
 public class LeetCode617 {
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {

@@ -1,4 +1,4 @@
-package commonutils.convert;
+package common_utils.convert;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,5 +27,9 @@ public class LeetCodeArrayConvert {
         }
 
         log.info(strBuf.toString());
+    }
+
+    public static int[] intArrayConvert(String input) {
+        return new int[0];
     }
 }

@@ -1,8 +1,6 @@
 package leetcode.Vol1to100;
 
-import commonutils.leetcode.ListNode;
-
-import java.util.PriorityQueue;
+import common_structure.leetcode.ListNode;
 
 public class LeetCode23_3 {
     public ListNode mergeKLists(ListNode[] lists) {
